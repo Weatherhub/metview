@@ -1,0 +1,1 @@
+../ddl/set_active_smos.sql

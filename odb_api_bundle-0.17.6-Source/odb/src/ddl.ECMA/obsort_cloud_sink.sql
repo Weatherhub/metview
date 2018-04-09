@@ -1,0 +1,1 @@
+../ddl/obsort_cloud_sink.sql

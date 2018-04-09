@@ -1,0 +1,1 @@
+../ddl/obstat_radar.sql

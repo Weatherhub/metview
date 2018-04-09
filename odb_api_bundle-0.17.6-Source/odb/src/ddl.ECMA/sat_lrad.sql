@@ -1,0 +1,1 @@
+../ddl/sat_lrad.sql

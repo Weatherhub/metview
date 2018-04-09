@@ -1,0 +1,177 @@
+cmake_minimum_required( VERSION 2.8.11 FATAL_ERROR )
+
+include( ${INCLUDE_CONFIG}-local-config.cmake OPTIONAL )
+
+set( CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE_DIR}/../ecbuild/cmake;${CMAKE_MODULE_PATH}" )
+
+include( ecbuild_bundle )
+
+project( MetviewBundle C CXX Fortran )
+
+
+# -------------------------------------------------------------------------------------
+# settings which are required across the packages to get a working Metview installation
+
+#general
+set(ENABLE_ODB           OFF CACHE BOOL "ODB support")
+#set(ENABLE_ODB1          OFF CACHE BOOL "ODB-1 support")
+set(ENABLE_EXPERIMENTAL  OFF CACHE BOOL "Experimental features")
+
+
+#mars
+set(ECMWF       OFF CACHE BOOL "build the client as for ECMWF")
+set(CONFIG_FDB  OFF CACHE BOOL "database configuration to access FDB")
+
+#GRIB_API
+set(ENABLE_PNG      ON  CACHE BOOL "Enable PNG") # required on Mac OSX
+
+
+
+#magics
+set(ENABLE_PYTHON   OFF CACHE BOOL "Enable Python")
+set(ENABLE_CAIRO    ON  CACHE BOOL "Enable Cairo")
+set(ENABLE_PNG      ON  CACHE BOOL "Enable PNG")  # needed for Mac OS X
+set(ENABLE_BUFR     ON  CACHE BOOL "Enable BUFR")
+set(ENABLE_NETCDF   ON  CACHE BOOL "Enable NetCDF")
+
+# if ENABLE_UI is OFF, then we need to tell Magics
+if (ENABLE_UI STREQUAL "OFF")
+    set(ENABLE_METVIEW_NO_QT  ON  CACHE BOOL "Enable Metview but no Qt")
+else()
+    set(ENABLE_METVIEW        ON  CACHE BOOL "Enable Metview")
+endif()
+
+set(METVIEW_BUNDLE_MAGICS "${CMAKE_SOURCE_DIR}/magics"  CACHE STRING "Magics source location")
+
+
+#emoslib
+set(ENABLE_SINGLE_PRECISION OFF          CACHE BOOL   "")
+set(BUFR_TABLES_PATH share/bufrdc_tables CACHE STRING "")
+set(LIBEMOS_BUILD_SHARED_LIBS ON         CACHE BOOL   "")
+
+#metview
+set(METVIEW_BUNDLE ${CMAKE_SOURCE_DIR} CACHE STRING "")
+
+
+# -------------------------------------------------------------------------------------
+
+
+
+ecbuild_bundle_initialize()
+
+    ecbuild_add_option( FEATURE EXPOSE_SUBPACKAGES
+                        DEFAULT OFF
+                        DESCRIPTION "Allow separate use of the sub-packages in the bundle")
+
+
+    ecbuild_add_option( FEATURE ECCODES DESCRIPTION "" DEFAULT ON )
+
+
+
+    # if the installer does not want to expose the sub-packages then we need to:
+    # a) change $PREFIX so that everything is installed into a sub-directory
+    # b) change the location of the Metview startup script so it's installed
+    #    where intended (Metview takes care of this)
+
+
+
+    if (NOT ENABLE_EXPOSE_SUBPACKAGES)
+        set(ORIGINAL_CMAKE_INSTALL_PREFIX ${CMAKE_INSTALL_PREFIX})
+        set(CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}/lib/metview-bundle")
+    endif()
+
+    if(METVIEW_SITE STREQUAL ecmwf )
+        ecbuild_bundle( PROJECT metview-ecmwf-configs  STASH "metv/metview-ecmwf-configs"  BRANCH  develop     UPDATE )
+    endif()
+
+    if(ENABLE_ECCODES)
+<<<<<<< HEAD
+        ecbuild_bundle( PROJECT eccodes            STASH "eccodes/eccodes"             TAG     2.4.1           UPDATE )
+    else()
+        ecbuild_bundle( PROJECT grib_api           STASH "grib/grib_api"               TAG     1.23.1          UPDATE )
+=======
+        ecbuild_bundle( PROJECT eccodes            STASH "eccodes/eccodes"             TAG     2.5.0   UPDATE )
+    else()
+        ecbuild_bundle( PROJECT grib_api           STASH "grib/grib_api"               TAG     1.24.0  UPDATE )
+>>>>>>> master
+    endif()
+
+    if(METVIEW_SITE STREQUAL ecmwf )
+        set( FDB_CONF_FILE /usr/local/apps/fdb/etc/Config )
+        ecbuild_bundle( PROJECT fdb                STASH "mars/fdb_vintage"            TAG     4.8.4   UPDATE )
+    else()
+        set(FDB_DIR "/dummy/path/for/bundle")
+    endif()
+
+<<<<<<< HEAD
+    ecbuild_bundle( PROJECT bufrdc_tables          STASH "mars/bufrdc_tables"          TAG     000411          UPDATE )
+    ecbuild_bundle( PROJECT libemos                STASH "mars/libemos"                BRANCH  feature/EMOS-317-shared UPDATE )
+
+    if(ENABLE_ODB)
+        set(ODB_ECKIT ON CACHE BOOL "ODB_API is built on ecKit")
+        ecbuild_bundle( PROJECT eckit              STASH "ecsdk/eckit"                 TAG     0.17.1          UPDATE )
+        ecbuild_bundle( PROJECT metkit             STASH "ecsdk/metkit"                TAG     0.6.0           UPDATE )
+        ecbuild_bundle( PROJECT odb_api            STASH "odb/odb_api"                 TAG     0.17.1          UPDATE )
+=======
+    ecbuild_bundle( PROJECT bufrdc_tables          STASH "mars/bufrdc_tables"          TAG     000411  UPDATE )
+    ecbuild_bundle( PROJECT libemos                STASH "mars/libemos"                TAG     4.5.2   UPDATE )
+
+    if(ENABLE_ODB)
+        set(ODB_ECKIT ON CACHE BOOL "ODB_API is built on ecKit")
+        ecbuild_bundle( PROJECT eckit              STASH "ecsdk/eckit"                 TAG  0.18.0  UPDATE )
+        ecbuild_bundle( PROJECT metkit             STASH "ecsdk/metkit"                TAG  0.7.0   UPDATE )
+        ecbuild_bundle( PROJECT odb_api            STASH "odb/odb_api"                 TAG  0.17.3  UPDATE )
+>>>>>>> master
+    #if(ENABLE_ODB1)
+    #    ecbuild_bundle( PROJECT odb-tools          STASH "odb/odb-tools"               BRANCH  release/0.17.1  UPDATE )
+    #endif()
+    endif()
+
+<<<<<<< HEAD
+    ecbuild_bundle( PROJECT mars-client            STASH "mars/mars-client"            BRANCH  develop         UPDATE )
+    ecbuild_bundle( PROJECT magics                 STASH "mag/magics"                  TAG     2.34.0          UPDATE )
+    ecbuild_bundle( PROJECT metview                STASH "metv/metview"                BRANCH  feature/METV-1649-python-prototype  UPDATE )
+=======
+    ecbuild_bundle( PROJECT mars-client            STASH "mars/mars-client"            BRANCH  release/6.19.0  UPDATE )
+    ecbuild_bundle( PROJECT magics                 STASH "mag/magics"                  TAG   2.34.3  UPDATE )
+    ecbuild_bundle( PROJECT metview                STASH "metv/metview"                TAG   4.9.0   UPDATE )
+>>>>>>> master
+
+
+    ecbuild_dont_pack(FILES configure.sh;ecmwf;make-tarball.sh;test-tarball.sh;configure.clang.sh;bamboo)
+
+ecbuild_bundle_finalize()
+
+
+ecbuild_info("ENABLE_EXPOSE_SUBPACKAGES is ${ENABLE_EXPOSE_SUBPACKAGES}:")
+if (ENABLE_EXPOSE_SUBPACKAGES)
+    ecbuild_info("All packages in the bundle will be installed at the same level into:")
+    ecbuild_info("  ${CMAKE_INSTALL_PREFIX}")
+else()
+    ecbuild_info("All packages in the bundle will be installed into a sub-directory:")
+    ecbuild_info("  ${CMAKE_INSTALL_PREFIX}")
+    ecbuild_info ("The Metview startup script will be installed into:")
+    ecbuild_info("  ${ORIGINAL_CMAKE_INSTALL_PREFIX}/bin")
+endif()
+
+
+
+
+#ecbuild_bundle_initialize()
+#    ecbuild_bundle( PROJECT metview-ecmwf-configs  STASH "metv/metview-ecmwf-configs"  BRANCH  develop  UPDATE )
+#    ecbuild_bundle( PROJECT grib_api               STASH "grib/grib_api"               BRANCH  develop  UPDATE )
+#
+#    if(METVIEW_SITE STREQUAL ecmwf )
+#        set( FDB_CONF_FILE /usr/local/apps/fdb/etc/Config )
+#        ecbuild_bundle( PROJECT fdb                STASH "mars/fdb_vintage"            BRANCH  develop  UPDATE )
+#    endif()
+#
+#    ecbuild_bundle( PROJECT bufrdc_tables          STASH "mars/bufrdc_tables"          BRANCH  master   UPDATE )
+#    ecbuild_bundle( PROJECT libemos                STASH "mars/libemos"                BRANCH  develop  UPDATE )
+#    ecbuild_bundle( PROJECT eckit                  STASH "ecsdk/eckit"                 BRANCH  develop  UPDATE )
+#    ecbuild_bundle( PROJECT odb                    STASH "odb/odb"                     BRANCH  develop  UPDATE )
+#    ecbuild_bundle( PROJECT odb_api                STASH "odb/odb_api"                 BRANCH  develop  UPDATE )
+#    ecbuild_bundle( PROJECT mars-client            STASH "mars/mars-client"            BRANCH  develop  UPDATE )
+#    ecbuild_bundle( PROJECT magics                 STASH "mag/magics"                  BRANCH  develop  UPDATE )
+#    ecbuild_bundle( PROJECT metview                STASH "metv/metview"                BRANCH  develop  UPDATE )
+#ecbuild_bundle_finalize()

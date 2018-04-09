@@ -1,0 +1,1 @@
+../ddl/setup_tovscv_cloud_sink.sql

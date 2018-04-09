@@ -1,0 +1,1 @@
+../ddl/varbc_gbrad_robody.sql

@@ -1,0 +1,1 @@
+../ddl/obsort_scatt_body.sql

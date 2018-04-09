@@ -1,0 +1,1 @@
+../ddl/ecmwf_matchup_raingg.sql

@@ -1,0 +1,1 @@
+../ddl/satellite_identifier_list.sql

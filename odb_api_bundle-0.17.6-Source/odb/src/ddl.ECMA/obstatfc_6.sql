@@ -1,0 +1,1 @@
+../ddl/obstatfc_6.sql

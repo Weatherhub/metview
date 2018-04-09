@@ -1,0 +1,1 @@
+../ddl/getsatid_resat.sql

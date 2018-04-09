@@ -1,0 +1,1 @@
+../ddl/post_thinn_robody_7.sql

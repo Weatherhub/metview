@@ -1,0 +1,1 @@
+../ddl/mkglobstab_gpsro.sql

@@ -1,0 +1,1 @@
+../ddl/sat_ssmi.sql

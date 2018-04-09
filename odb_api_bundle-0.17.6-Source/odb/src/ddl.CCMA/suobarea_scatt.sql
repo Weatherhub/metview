@@ -1,0 +1,1 @@
+../ddl/suobarea_scatt.sql

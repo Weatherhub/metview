@@ -1,0 +1,1 @@
+../ddl/obsort_resat_averaging_kernel.sql

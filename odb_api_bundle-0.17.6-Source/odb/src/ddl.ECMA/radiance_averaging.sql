@@ -1,0 +1,1 @@
+../ddl/radiance_averaging.sql

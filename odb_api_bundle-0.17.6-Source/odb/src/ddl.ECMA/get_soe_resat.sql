@@ -1,0 +1,1 @@
+../ddl/get_soe_resat.sql

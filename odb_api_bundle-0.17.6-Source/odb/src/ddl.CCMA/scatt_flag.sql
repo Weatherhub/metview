@@ -1,0 +1,1 @@
+../ddl/scatt_flag.sql

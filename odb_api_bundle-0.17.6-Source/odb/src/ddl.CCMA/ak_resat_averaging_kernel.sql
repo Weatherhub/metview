@@ -1,0 +1,1 @@
+../ddl/ak_resat_averaging_kernel.sql

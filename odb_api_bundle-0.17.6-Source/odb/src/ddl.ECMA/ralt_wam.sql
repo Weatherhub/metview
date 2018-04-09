@@ -1,0 +1,1 @@
+../ddl/ralt_wam.sql

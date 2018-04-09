@@ -1,0 +1,19 @@
+#!/usr/bin/env ksh
+
+# Wrapper script allowing to run MPI executables as serial programs
+
+set -e
+
+if echo $0 | grep -q ".x$"; then
+  mpi_prog=${0%.*}mp.x
+else
+  mpi_prog=${0}mp
+fi
+
+sanitized_args=$(echo $@ | sed 's/\$/\\$/g')
+
+if [[ -n $ENV_RUN_PARALLEL || -n $OMPI_COMMAND ]]; then
+  eval $mpi_prog $sanitized_args
+else
+  eval @MPIEXEC@ -n 1 $mpi_prog $sanitized_args
+fi

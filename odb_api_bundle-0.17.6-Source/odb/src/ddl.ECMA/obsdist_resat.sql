@@ -1,0 +1,1 @@
+../ddl/obsdist_resat.sql

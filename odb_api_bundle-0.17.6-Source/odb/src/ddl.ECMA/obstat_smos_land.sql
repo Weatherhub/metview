@@ -1,0 +1,1 @@
+../ddl/obstat_smos_land.sql

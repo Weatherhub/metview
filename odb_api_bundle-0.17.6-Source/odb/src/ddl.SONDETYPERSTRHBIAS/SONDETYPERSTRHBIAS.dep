@@ -1,0 +1,18 @@
+#-- First version:  02-Feb-2009
+
+DDLS=\
+	SONDETYPERSTRHBIAS.ddl \
+	mdi.inc \
+	obstype.inc \
+	varno.inc \
+	vertco_type.inc \
+	ppcode.inc
+
+TABLES=\
+	desc \
+	hdr \
+	body
+
+VIEWS=\
+	sondetyperstrhbody \
+	sondetyperstrhhdr

@@ -1,0 +1,1 @@
+../ddl/obstat_fcdep_gpsro.sql

@@ -1,0 +1,14 @@
+#-- Last updated:  22-Jan-2000
+
+DDLS=\
+	PRESCREEN.ddl
+
+TABLES=\
+	hdr \
+	body \
+	bufr
+
+VIEWS=\
+	duplchk_ps_1 \
+	duplchk_ps_2
+

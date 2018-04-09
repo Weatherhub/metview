@@ -1,0 +1,1 @@
+../ddl/update_fcdiag_links.sql

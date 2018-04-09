@@ -1,0 +1,1 @@
+../ddl/sathdr_cloud_sink.sql
