@@ -1,1 +1,0 @@
-../ddl/stat_obs_1.sql

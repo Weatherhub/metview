@@ -1,1 +1,0 @@
-../ddl/matchup_gbrad.sql

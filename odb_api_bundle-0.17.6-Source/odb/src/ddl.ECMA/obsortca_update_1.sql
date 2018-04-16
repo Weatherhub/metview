@@ -1,1 +1,0 @@
-../ddl/obsortca_update_1.sql

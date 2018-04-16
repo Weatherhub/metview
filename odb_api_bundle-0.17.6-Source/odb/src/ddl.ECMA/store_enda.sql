@@ -1,1 +1,0 @@
-../ddl/store_enda.sql

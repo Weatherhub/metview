@@ -1,1 +1,0 @@
-../ddl/ecmwf_matchup_hdr.sql

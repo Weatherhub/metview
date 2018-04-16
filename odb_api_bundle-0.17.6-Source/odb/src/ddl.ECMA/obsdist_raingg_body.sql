@@ -1,1 +1,0 @@
-../ddl/obsdist_raingg_body.sql

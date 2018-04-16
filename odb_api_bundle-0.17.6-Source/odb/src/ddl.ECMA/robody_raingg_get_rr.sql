@@ -1,1 +1,0 @@
-../ddl/robody_raingg_get_rr.sql

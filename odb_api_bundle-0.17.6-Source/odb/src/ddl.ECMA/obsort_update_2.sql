@@ -1,1 +1,0 @@
-../ddl/obsort_update_2.sql

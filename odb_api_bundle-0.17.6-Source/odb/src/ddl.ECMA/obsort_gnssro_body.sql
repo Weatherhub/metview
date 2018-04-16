@@ -1,1 +1,0 @@
-../ddl/obsort_gnssro_body.sql

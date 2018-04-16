@@ -1,1 +1,0 @@
-../ddl/obsort_collocated_imager_information.sql

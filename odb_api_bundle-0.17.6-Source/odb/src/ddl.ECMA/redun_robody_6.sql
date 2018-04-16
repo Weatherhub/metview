@@ -1,1 +1,0 @@
-../ddl/redun_robody_6.sql

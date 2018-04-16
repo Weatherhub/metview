@@ -1,1 +1,0 @@
-../ddl/post_thinn_robhdr_4.sql

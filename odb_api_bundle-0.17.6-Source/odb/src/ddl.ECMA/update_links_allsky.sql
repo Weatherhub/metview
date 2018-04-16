@@ -1,1 +1,0 @@
-../ddl/update_links_allsky.sql

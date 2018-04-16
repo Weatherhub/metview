@@ -1,1 +1,0 @@
-../ddl/count_scanpos.sql

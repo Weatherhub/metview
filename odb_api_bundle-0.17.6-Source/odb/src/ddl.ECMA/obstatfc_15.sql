@@ -1,1 +1,0 @@
-../ddl/obstatfc_15.sql

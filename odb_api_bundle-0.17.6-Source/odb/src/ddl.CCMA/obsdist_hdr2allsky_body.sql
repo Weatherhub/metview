@@ -1,1 +1,0 @@
-../ddl/obsdist_hdr2allsky_body.sql

@@ -1,1 +1,0 @@
-../ddl/satbody_screen_atovs.sql

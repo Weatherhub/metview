@@ -1,1 +1,0 @@
-../ddl/robody_gp_get_ssmi.sql

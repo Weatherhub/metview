@@ -1,1 +1,0 @@
-../ddl/check_linksdb.sql

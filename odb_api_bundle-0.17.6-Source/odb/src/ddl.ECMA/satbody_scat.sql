@@ -1,1 +1,0 @@
-../ddl/satbody_scat.sql

@@ -1,1 +1,0 @@
-../ddl/obsdist_update_7.sql

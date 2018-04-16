@@ -1,1 +1,0 @@
-../ddl/new_thinn_robody_11.sql

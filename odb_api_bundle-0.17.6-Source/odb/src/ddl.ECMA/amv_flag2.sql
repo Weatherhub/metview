@@ -1,1 +1,0 @@
-../ddl/amv_flag2.sql

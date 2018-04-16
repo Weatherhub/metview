@@ -1,1 +1,0 @@
-../ddl/suvarbc_robody_0.sql

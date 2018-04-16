@@ -1,1 +1,0 @@
-../ddl/links_gbrad.sql

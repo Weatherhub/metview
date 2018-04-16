@@ -1,1 +1,0 @@
-../ddl/airs_flag.sql

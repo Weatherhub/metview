@@ -1,1 +1,0 @@
-../ddl/scatt_update_links.sql

@@ -1,1 +1,0 @@
-../ddl/robody_gbrad_put_rr.sql

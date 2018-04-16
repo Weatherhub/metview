@@ -1,1 +1,0 @@
-../ddl/suobarea_sat.sql

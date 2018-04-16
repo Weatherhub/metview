@@ -1,1 +1,0 @@
-../ddl/robody_gbrad_get_rr.sql

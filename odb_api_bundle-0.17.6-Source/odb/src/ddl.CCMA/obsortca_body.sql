@@ -1,1 +1,0 @@
-../ddl/obsortca_body.sql

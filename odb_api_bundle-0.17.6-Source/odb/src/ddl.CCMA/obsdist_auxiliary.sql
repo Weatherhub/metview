@@ -1,1 +1,0 @@
-../ddl/obsdist_auxiliary.sql

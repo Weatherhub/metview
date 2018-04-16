@@ -1,1 +1,0 @@
-../ddl/obsort_sat.sql

@@ -1,1 +1,0 @@
-../ddl/obsort_hdr2scatt_body.sql

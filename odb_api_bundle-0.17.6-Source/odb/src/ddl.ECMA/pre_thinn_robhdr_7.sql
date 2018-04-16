@@ -1,1 +1,0 @@
-../ddl/pre_thinn_robhdr_7.sql

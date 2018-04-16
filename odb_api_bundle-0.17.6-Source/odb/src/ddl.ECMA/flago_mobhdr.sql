@@ -1,1 +1,0 @@
-../ddl/flago_mobhdr.sql

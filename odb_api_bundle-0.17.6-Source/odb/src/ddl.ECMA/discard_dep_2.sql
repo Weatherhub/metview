@@ -1,1 +1,0 @@
-../ddl/discard_dep_2.sql

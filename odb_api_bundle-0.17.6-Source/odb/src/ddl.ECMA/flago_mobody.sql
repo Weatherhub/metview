@@ -1,1 +1,0 @@
-../ddl/flago_mobody.sql

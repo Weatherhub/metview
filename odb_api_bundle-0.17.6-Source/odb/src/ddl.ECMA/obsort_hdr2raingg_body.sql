@@ -1,1 +1,0 @@
-../ddl/obsort_hdr2raingg_body.sql

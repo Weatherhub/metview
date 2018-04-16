@@ -1,1 +1,0 @@
-../ddl/sufger_allsky_body.sql

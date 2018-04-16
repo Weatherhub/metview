@@ -1,6 +1,0 @@
- seqno@hdr date@hdr time@hdr statid@hdr lat@hdr lon@hdr body.offset@hdr body.len@hdr entryno@body varno@body press@body obsvalue@body depar@body obs_error@body bias@body
- 1 20010101 100000 '07027   ' 49.18 -0.45 0 2 1 110 657.05 98530 -85.86 69.03 NULL
- 1 20010101 100000 '07027   ' 49.18 -0.45 0 2 2 39 98530 282.7 1.8 1.95 NULL
- 2 20010101 130000 '07061   ' 49.82 3.2 2 2 1 110 990.47 98480 -221.59 69.09 NULL
- 2 20010101 130000 '07061   ' 49.82 3.2 2 2 2 39 98480 279.8 1.06 1.95 NULL
- 3 20010101 130000 '07075   ' 49.78 4.63 4 1 1 110 1451.38 98250 -123.32 69.36 NULL

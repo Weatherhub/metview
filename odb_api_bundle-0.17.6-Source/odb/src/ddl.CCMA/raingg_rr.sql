@@ -1,1 +1,0 @@
-../ddl/raingg_rr.sql

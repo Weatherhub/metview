@@ -1,1 +1,0 @@
-../ddl/obscount_1.sql

@@ -1,1 +1,0 @@
-../ddl/cavodk_robody.sql

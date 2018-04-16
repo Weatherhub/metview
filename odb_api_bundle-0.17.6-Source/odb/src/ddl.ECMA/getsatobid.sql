@@ -1,1 +1,0 @@
-../ddl/getsatobid.sql

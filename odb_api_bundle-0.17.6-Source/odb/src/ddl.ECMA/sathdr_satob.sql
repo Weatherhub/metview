@@ -1,1 +1,0 @@
-../ddl/sathdr_satob.sql

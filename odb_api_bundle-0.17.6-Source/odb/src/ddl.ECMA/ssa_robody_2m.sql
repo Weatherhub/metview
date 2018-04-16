@@ -1,1 +1,0 @@
-../ddl/ssa_robody_2m.sql

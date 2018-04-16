@@ -1,1 +1,0 @@
-../ddl/robody_mwave_update_smos.sql

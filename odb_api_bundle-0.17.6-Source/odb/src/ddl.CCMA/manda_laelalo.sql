@@ -1,1 +1,0 @@
-../ddl/manda_laelalo.sql

@@ -1,1 +1,0 @@
-../ddl/getsatid.sql

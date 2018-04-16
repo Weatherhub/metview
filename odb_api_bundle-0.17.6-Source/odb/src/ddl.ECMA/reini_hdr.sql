@@ -1,1 +1,0 @@
-../ddl/reini_hdr.sql

@@ -1,1 +1,0 @@
-../ddl/ascatsm_robody_1.sql

@@ -1,1 +1,0 @@
-../ddl/matchup_update_6.sql

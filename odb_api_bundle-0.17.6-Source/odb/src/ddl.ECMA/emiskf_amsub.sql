@@ -1,1 +1,0 @@
-../ddl/emiskf_amsub.sql

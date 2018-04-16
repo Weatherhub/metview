@@ -1,1 +1,0 @@
-../ddl/bator_hdr_4.sql

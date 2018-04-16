@@ -1,1 +1,0 @@
-../ddl/robhdr_gp_get_ssmi.sql

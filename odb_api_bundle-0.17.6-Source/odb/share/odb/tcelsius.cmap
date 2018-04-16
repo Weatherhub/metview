@@ -1,4 +1,0 @@
-Temperature (in C)
-obsvalue@body
-220 320
-1,1,-273.15 ! Method=1 --> Scaling: 1 * K - 273.15

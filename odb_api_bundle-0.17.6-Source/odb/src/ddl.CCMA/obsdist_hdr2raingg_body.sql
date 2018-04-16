@@ -1,1 +1,0 @@
-../ddl/obsdist_hdr2raingg_body.sql

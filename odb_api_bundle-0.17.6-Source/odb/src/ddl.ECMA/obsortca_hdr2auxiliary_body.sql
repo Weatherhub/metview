@@ -1,1 +1,0 @@
-../ddl/obsortca_hdr2auxiliary_body.sql

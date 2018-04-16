@@ -1,1 +1,0 @@
-../ddl/exp_info_1.sql

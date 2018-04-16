@@ -1,1 +1,0 @@
-../ddl/sat_satob.sql

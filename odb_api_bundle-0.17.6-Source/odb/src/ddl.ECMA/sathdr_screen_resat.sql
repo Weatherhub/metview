@@ -1,1 +1,0 @@
-../ddl/sathdr_screen_resat.sql

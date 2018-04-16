@@ -1,1 +1,0 @@
-../ddl/resat_update_links.sql

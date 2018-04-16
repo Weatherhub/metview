@@ -1,1 +1,0 @@
-../ddl/update_hprior_57.sql
