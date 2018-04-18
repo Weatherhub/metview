@@ -64,7 +64,7 @@ RUN git clone ${PYNCEPBUFR_URL} \
     && cd /tmp/build/py-ncepbufr \
     && python setup.py build \
     && python setup.py install \
-    && cp /tmp/build/py-ncepbufr/build/lib.linux-x86_64-2.7/_bufrlib.so /usr/local/lib/libbufr.so \
+    && cp /tmp/build/py-ncepbufr/src/libbufr.a /usr/local/lib/libbufr.a \
     && rm -fr /tmp/build/*
 
 ENV LD_LIBRARY_PATH /usr/local/lib
